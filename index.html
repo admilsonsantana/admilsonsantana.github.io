@@ -303,39 +303,74 @@ section {
 
 
 /* =========================
-   CERTIFICATIONS
+   CERTIFICATIONS & BADGES
 ========================= */
 
 .badges-area {
-    border: 1px dashed #26343e;
+    border: 1px solid #26343e;
     border-radius: 10px;
-    padding: 45px;
-    text-align: center;
+    padding: 40px;
     background: #0c1117;
+    text-align: center;
 }
 
 .badges-area h3 {
     color: #ffffff;
     margin-bottom: 10px;
+    font-size: 22px;
 }
 
 .badges-area p {
     color: #7f8c97;
     font-family: Arial, sans-serif;
+    margin-bottom: 30px;
 }
 
-.badges-placeholder {
-    margin-top: 25px;
+.badges-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+    align-items: stretch;
 }
 
-.badge-placeholder {
+.badge-card {
+    background: #070b10;
     border: 1px solid #26343e;
-    border-radius: 8px;
-    padding: 25px 10px;
-    color: #56636e;
+    border-radius: 10px;
+    padding: 15px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 210px;
+}
+
+.badge-card:hover {
+    transform: translateY(-7px);
+    border-color: #00ff9c;
+    box-shadow: 0 0 20px rgba(0, 255, 156, 0.15);
+}
+
+.badge-card img {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.credly-link {
+    display: inline-block;
+    margin-top: 35px;
+    border: 1px solid #26343e;
+    padding: 10px 18px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.credly-link:hover {
+    border-color: #00ff9c;
+    background: #101a20;
 }
 
 
@@ -409,6 +444,14 @@ footer span {
    MOBILE
 ========================= */
 
+@media (max-width: 900px) {
+
+    .badges-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
 @media (max-width: 700px) {
 
     .terminal {
@@ -429,11 +472,34 @@ footer span {
 
 }
 
+@media (max-width: 600px) {
+
+    .badges-area {
+        padding: 25px 15px;
+    }
+
+    .badges-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .badge-card {
+        min-height: 150px;
+        padding: 10px;
+    }
+
+    .badge-card img {
+        max-width: 130px;
+    }
+
+}
+
 </style>
 
 </head>
 
 <body>
+
 
 <!-- =========================
      HEADER
@@ -516,6 +582,7 @@ admilson@cybersecurity:~$
 
 </header>
 
+
 <!-- =========================
      ABOUT
 ========================= -->
@@ -549,6 +616,7 @@ Autolac e 1Doc.
 </div>
 
 </section>
+
 
 <!-- =========================
      SKILLS
@@ -606,6 +674,7 @@ skills
 
 </section>
 
+
 <!-- =========================
      EXPERIENCE
 ========================= -->
@@ -647,6 +716,7 @@ suporte técnico e gestão de equipes.
 
 </div>
 
+
 <div class="timeline-item">
 
 <h3>
@@ -670,6 +740,7 @@ controle de acesso, impressão e soluções corporativas.
 </p>
 
 </div>
+
 
 <div class="timeline-item">
 
@@ -701,8 +772,9 @@ corporativos.
 
 </section>
 
+
 <!-- =========================
-     CERTIFICATIONS
+     CERTIFICATIONS & BADGES
 ========================= -->
 
 <section id="certifications">
@@ -711,7 +783,7 @@ corporativos.
 
 <h2 class="section-title">
 
-certifications
+certifications & badges
 
 </h2>
 
@@ -725,81 +797,122 @@ Credly Badges
 
 <p>
 
-Digital credentials and professional certifications
+Professional certifications, courses and achievements
 
 </p>
 
-<div class="badges-placeholder">
 
-<div class="badge-placeholder">
+<div class="badges-grid">
 
-BADGE
 
-<br>
+<div class="badge-card">
 
-01
-
-</div>
-
-<div class="badge-placeholder">
-
-BADGE
-
-<br>
-
-02
+<img
+src="badges/ccna-introduction-to-networks.png"
+alt="CCNA Introduction to Networks"
+title="CCNA Introduction to Networks">
 
 </div>
 
-<div class="badge-placeholder">
 
-BADGE
+<div class="badge-card">
 
-<br>
-
-03
-
-</div>
-
-<div class="badge-placeholder">
-
-BADGE
-
-<br>
-
-04
+<img
+src="badges/ccna-switching-routing-wireless-essentials.png"
+alt="CCNA Switching Routing Wireless Essentials"
+title="CCNA Switching Routing Wireless Essentials">
 
 </div>
 
-<div class="badge-placeholder">
 
-BADGE
+<div class="badge-card">
 
-<br>
-
-05
-
-</div>
-
-<div class="badge-placeholder">
-
-BADGE
-
-<br>
-
-06
+<img
+src="badges/cisco-networking-academy-capture-the-flag-2026.png"
+alt="Cisco Networking Academy Capture the Flag 2026"
+title="Cisco Networking Academy Capture the Flag 2026">
 
 </div>
 
+
+<div class="badge-card">
+
+<img
+src="badges/cisco-networking-academy-learn-a-thon-2026.png"
+alt="Cisco Networking Academy Learn-A-Thon 2026"
+title="Cisco Networking Academy Learn-A-Thon 2026">
+
 </div>
 
-<br>
+
+<div class="badge-card">
+
+<img
+src="badges/cyberops-associate.png"
+alt="CyberOps Associate"
+title="CyberOps Associate">
+
+</div>
+
+
+<div class="badge-card">
+
+<img
+src="badges/cybersecurity-essentials.png"
+alt="Cybersecurity Essentials"
+title="Cybersecurity Essentials">
+
+</div>
+
+
+<div class="badge-card">
+
+<img
+src="badges/ethical-hacker.png"
+alt="Ethical Hacker"
+title="Ethical Hacker">
+
+</div>
+
+
+<div class="badge-card">
+
+<img
+src="badges/introduction-to-cybersecurity.png"
+alt="Introduction to Cybersecurity"
+title="Introduction to Cybersecurity">
+
+</div>
+
+
+<div class="badge-card">
+
+<img
+src="badges/networking-academy-learn-a-thon-2025.png"
+alt="Networking Academy Learn-A-Thon 2025"
+title="Networking Academy Learn-A-Thon 2025">
+
+</div>
+
+
+<div class="badge-card">
+
+<img
+src="badges/network-security.png"
+alt="Network Security"
+title="Network Security">
+
+</div>
+
+
+</div>
+
 
 <a
+class="credly-link"
 href="https://www.credly.com/users/admilson-santana-teixeira"
 target="_blank"
-
->
+rel="noopener noreferrer">
 
 → View my Credly profile
 
@@ -810,6 +923,7 @@ target="_blank"
 </div>
 
 </section>
+
 
 <!-- =========================
      TECHNOLOGIES
@@ -826,6 +940,7 @@ technologies
 </h2>
 
 <div class="grid">
+
 
 <div class="card">
 
@@ -845,6 +960,7 @@ administration.
 
 </div>
 
+
 <div class="card">
 
 <h3>
@@ -861,6 +977,7 @@ switching and network security.
 </p>
 
 </div>
+
 
 <div class="card">
 
@@ -879,6 +996,7 @@ security assessment and hardening.
 
 </div>
 
+
 <div class="card">
 
 <h3>
@@ -896,11 +1014,13 @@ Zabbix and operational visibility.
 
 </div>
 
+
 </div>
 
 </div>
 
 </section>
+
 
 <!-- =========================
      PROJECTS
@@ -917,6 +1037,7 @@ projects
 </h2>
 
 <div class="grid">
+
 
 <div class="card project">
 
@@ -942,6 +1063,7 @@ WINDOWS
 
 </div>
 
+
 <div class="card project">
 
 <h3>
@@ -965,6 +1087,7 @@ NETWORK
 </span>
 
 </div>
+
 
 <div class="card project">
 
@@ -990,6 +1113,7 @@ SECURITY
 
 </div>
 
+
 <div class="card project">
 
 <h3>
@@ -1013,6 +1137,7 @@ MONITORING
 </span>
 
 </div>
+
 
 <div class="card project">
 
@@ -1038,6 +1163,7 @@ SYSTEMS
 
 </div>
 
+
 <div class="card project">
 
 <h3>
@@ -1062,11 +1188,13 @@ INFRASTRUCTURE
 
 </div>
 
+
 </div>
 
 </div>
 
 </section>
+
 
 <!-- =========================
      CONTACT
@@ -1090,50 +1218,51 @@ Let's connect.
 
 <div class="links">
 
+
 <a
 href="https://www.linkedin.com/in/admilsonsantana/"
 target="_blank"
-
->
+rel="noopener noreferrer">
 
 LinkedIn
 
 </a>
 
+
 <a
 href="https://github.com/DhimiSantana"
 target="_blank"
-
->
+rel="noopener noreferrer">
 
 GitHub
 
 </a>
 
+
 <a
 href="https://www.credly.com/users/admilson-santana-teixeira"
 target="_blank"
-
->
+rel="noopener noreferrer">
 
 Credly
 
 </a>
 
-<a
-href="mailto:admilsonsantana33@gmail.com"
 
->
+<a
+href="mailto:admilsonsantana33@gmail.com">
 
 Email
 
 </a>
+
 
 </div>
 
 </div>
 
 </section>
+
 
 <!-- =========================
      FOOTER
@@ -1160,6 +1289,7 @@ admilson@cybersecurity:~$ exit
 </div>
 
 </footer>
+
 
 </body>
 
