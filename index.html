@@ -1,1 +1,1166 @@
+<!DOCTYPE html>
 
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admilson Santana | IT Infrastructure & Cybersecurity</title>
+
+<meta name="description" content="Admilson Santana - IT Infrastructure, Cybersecurity, Networks, Windows, Linux, Cisco and Information Technology.">
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #070b10;
+    color: #d7e0e8;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.7;
+}
+
+a {
+    color: #00ff9c;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+    border-bottom: 1px solid #1b2730;
+}
+
+.terminal {
+    width: 100%;
+    background: #0c1117;
+    border: 1px solid #26343e;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 0 50px rgba(0, 255, 156, 0.07);
+}
+
+
+/* =========================
+   MAC TERMINAL BUTTONS
+========================= */
+
+.terminal-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 35px;
+}
+
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.dot:nth-child(1) {
+    background-color: #ff5f57;
+    box-shadow: 0 0 6px rgba(255, 95, 87, 0.5);
+}
+
+.dot:nth-child(2) {
+    background-color: #febc2e;
+    box-shadow: 0 0 6px rgba(254, 188, 46, 0.5);
+}
+
+.dot:nth-child(3) {
+    background-color: #28c840;
+    box-shadow: 0 0 6px rgba(40, 200, 64, 0.5);
+}
+
+
+/* =========================
+   TERMINAL HEADER
+========================= */
+
+.prompt {
+    color: #00ff9c;
+    margin-bottom: 10px;
+}
+
+.name {
+    font-size: 52px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.role {
+    font-size: 22px;
+    color: #00ff9c;
+    margin-bottom: 25px;
+}
+
+.intro {
+    max-width: 850px;
+    font-family: Arial, sans-serif;
+    color: #aebbc6;
+    font-size: 17px;
+}
+
+.cursor {
+    display: inline-block;
+    width: 10px;
+    height: 20px;
+    background: #00ff9c;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 35px;
+}
+
+.nav a {
+    border: 1px solid #26343e;
+    padding: 8px 14px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.nav a:hover {
+    border-color: #00ff9c;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+    padding: 80px 0;
+    border-bottom: 1px solid #1b2730;
+}
+
+.section-title {
+    color: #00ff9c;
+    font-size: 27px;
+    margin-bottom: 35px;
+}
+
+.section-title::before {
+    content: "$ ";
+    color: #ffffff;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    max-width: 950px;
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    color: #c2ccd5;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill {
+    border: 1px solid #26343e;
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: #00ff9c;
+    background: #0c1117;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-3px);
+    border-color: #00ff9c;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #0c1117;
+    border: 1px solid #26343e;
+    border-radius: 9px;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #00ff9c;
+}
+
+.card h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #8f9ca7;
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.timeline {
+    border-left: 2px solid #00ff9c;
+    padding-left: 28px;
+}
+
+.timeline-item {
+    margin-bottom: 40px;
+}
+
+.timeline-item h3 {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.timeline-item span {
+    color: #00ff9c;
+    font-size: 14px;
+}
+
+.timeline-item p {
+    color: #9ba8b3;
+    font-family: Arial, sans-serif;
+    margin-top: 8px;
+}
+
+
+/* =========================
+   CERTIFICATIONS
+========================= */
+
+.badges-area {
+    border: 1px dashed #26343e;
+    border-radius: 10px;
+    padding: 45px;
+    text-align: center;
+    background: #0c1117;
+}
+
+.badges-area h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.badges-area p {
+    color: #7f8c97;
+    font-family: Arial, sans-serif;
+}
+
+.badges-placeholder {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 15px;
+}
+
+.badge-placeholder {
+    border: 1px solid #26343e;
+    border-radius: 8px;
+    padding: 25px 10px;
+    color: #56636e;
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.project {
+    min-height: 190px;
+}
+
+.project-tag {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 5px 10px;
+    border: 1px solid #26343e;
+    border-radius: 4px;
+    color: #00ff9c;
+    font-size: 12px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    text-align: center;
+}
+
+.contact-text {
+    color: #aab5be;
+    font-family: Arial, sans-serif;
+    margin-bottom: 30px;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.links a {
+    border: 1px solid #26343e;
+    padding: 11px 20px;
+    border-radius: 6px;
+}
+
+.links a:hover {
+    border-color: #00ff9c;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 40px 0;
+    text-align: center;
+    color: #596772;
+}
+
+footer span {
+    color: #00ff9c;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .terminal {
+        padding: 25px;
+    }
+
+    .name {
+        font-size: 36px;
+    }
+
+    .role {
+        font-size: 17px;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+<div class="container">
+
+<div class="terminal">
+
+<div class="terminal-bar">
+
+<span class="dot"></span>
+
+<span class="dot"></span>
+
+<span class="dot"></span>
+
+</div>
+
+<div class="prompt">
+
+admilson@cybersecurity:~$ whoami
+
+</div>
+
+<div class="name">
+
+Admilson Santana
+
+</div>
+
+<div class="role">
+
+IT Infrastructure | Cybersecurity
+
+</div>
+
+<p class="intro">
+
+Profissional de Tecnologia da Informação com experiência em
+infraestrutura, redes, servidores, segurança da informação,
+ambientes Windows e Linux e gestão de TI.
+
+Atuação em projetos de infraestrutura, implantação de sistemas,
+administração de redes, servidores e soluções corporativas.
+
+</p>
+
+<br>
+
+<div class="prompt">
+
+admilson@cybersecurity:~$
+
+<span class="cursor"></span>
+
+</div>
+
+<div class="nav">
+
+<a href="#about">about</a>
+
+<a href="#skills">skills</a>
+
+<a href="#experience">experience</a>
+
+<a href="#certifications">certifications</a>
+
+<a href="#projects">projects</a>
+
+<a href="#contact">contact</a>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+<div class="container">
+
+<h2 class="section-title">
+
+about
+
+</h2>
+
+<p class="about">
+
+Profissional de TI com ampla experiência em infraestrutura
+tecnológica, administração de servidores, redes, segurança
+da informação e gestão de ambientes corporativos.
+
+Experiência com Windows Server, Linux, Active Directory,
+Group Policy, virtualização, redes Cisco, equipamentos Dell,
+VLANs, ACLs, RADIUS, firewalls e monitoramento.
+
+Atuação também em implantação, administração e treinamento
+de usuários em sistemas corporativos como MV Sistemas,
+Autolac e 1Doc.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- =========================
+     SKILLS
+========================= -->
+
+<section id="skills">
+
+<div class="container">
+
+<h2 class="section-title">
+
+skills
+
+</h2>
+
+<div class="skills">
+
+<span class="skill">Windows Server</span>
+
+<span class="skill">Linux</span>
+
+<span class="skill">Active Directory</span>
+
+<span class="skill">GPO</span>
+
+<span class="skill">Cisco</span>
+
+<span class="skill">Dell</span>
+
+<span class="skill">Hyper-V</span>
+
+<span class="skill">VLAN</span>
+
+<span class="skill">ACL</span>
+
+<span class="skill">RADIUS</span>
+
+<span class="skill">Firewall</span>
+
+<span class="skill">Zabbix</span>
+
+<span class="skill">Nmap</span>
+
+<span class="skill">Kali Linux</span>
+
+<span class="skill">Cybersecurity</span>
+
+<span class="skill">Network Security</span>
+
+<span class="skill">IT Management</span>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+     EXPERIENCE
+========================= -->
+
+<section id="experience">
+
+<div class="container">
+
+<h2 class="section-title">
+
+experience
+
+</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<h3>
+
+IT Infrastructure & IT Management
+
+</h3>
+
+<span>
+
+Infrastructure • Networks • Servers • Security
+
+</span>
+
+<p>
+
+Experiência na administração de ambientes de TI,
+infraestrutura de redes, servidores físicos e virtuais,
+Active Directory, políticas de grupo, segurança,
+suporte técnico e gestão de equipes.
+
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>
+
+Infrastructure Projects
+
+</h3>
+
+<span>
+
+Networks • Systems • Technology
+
+</span>
+
+<p>
+
+Atuação em projetos de infraestrutura, implantação
+de sistemas, gestão de ativos, redes, telefonia IP,
+controle de acesso, impressão e soluções corporativas.
+
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>
+
+Enterprise Systems
+
+</h3>
+
+<span>
+
+MV Sistemas • Autolac • 1Doc
+
+</span>
+
+<p>
+
+Experiência com implantação, administração,
+suporte e treinamento de usuários em sistemas
+corporativos.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+     CERTIFICATIONS
+========================= -->
+
+<section id="certifications">
+
+<div class="container">
+
+<h2 class="section-title">
+
+certifications
+
+</h2>
+
+<div class="badges-area">
+
+<h3>
+
+Credly Badges
+
+</h3>
+
+<p>
+
+Digital credentials and professional certifications
+
+</p>
+
+<div class="badges-placeholder">
+
+<div class="badge-placeholder">
+
+BADGE
+
+<br>
+
+01
+
+</div>
+
+<div class="badge-placeholder">
+
+BADGE
+
+<br>
+
+02
+
+</div>
+
+<div class="badge-placeholder">
+
+BADGE
+
+<br>
+
+03
+
+</div>
+
+<div class="badge-placeholder">
+
+BADGE
+
+<br>
+
+04
+
+</div>
+
+<div class="badge-placeholder">
+
+BADGE
+
+<br>
+
+05
+
+</div>
+
+<div class="badge-placeholder">
+
+BADGE
+
+<br>
+
+06
+
+</div>
+
+</div>
+
+<br>
+
+<a
+href="https://www.credly.com/users/admilson-santana-teixeira"
+target="_blank"
+
+>
+
+→ View my Credly profile
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+     TECHNOLOGIES
+========================= -->
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+
+technologies
+
+</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>
+
+Infrastructure
+
+</h3>
+
+<p>
+
+Windows Server, Linux, Hyper-V,
+Active Directory, GPO and server
+administration.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+Networking
+
+</h3>
+
+<p>
+
+Cisco, Dell, VLAN, ACL, RADIUS,
+switching and network security.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+Cybersecurity
+
+</h3>
+
+<p>
+
+Kali Linux, Nmap, OSINT,
+security assessment and hardening.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+Monitoring
+
+</h3>
+
+<p>
+
+Infrastructure monitoring,
+Zabbix and operational visibility.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+     PROJECTS
+========================= -->
+
+<section id="projects">
+
+<div class="container">
+
+<h2 class="section-title">
+
+projects
+
+</h2>
+
+<div class="grid">
+
+<div class="card project">
+
+<h3>
+
+Active Directory & GPO
+
+</h3>
+
+<p>
+
+Administration of domains, users,
+computers, Group Policy and
+security hardening.
+
+</p>
+
+<span class="project-tag">
+
+WINDOWS
+
+</span>
+
+</div>
+
+<div class="card project">
+
+<h3>
+
+Cisco Network Lab
+
+</h3>
+
+<p>
+
+Network infrastructure studies
+involving switching, VLANs,
+ACLs and network security.
+
+</p>
+
+<span class="project-tag">
+
+NETWORK
+
+</span>
+
+</div>
+
+<div class="card project">
+
+<h3>
+
+Cybersecurity Lab
+
+</h3>
+
+<p>
+
+Practical studies involving
+Linux, Kali Linux, reconnaissance,
+network security and cybersecurity.
+
+</p>
+
+<span class="project-tag">
+
+SECURITY
+
+</span>
+
+</div>
+
+<div class="card project">
+
+<h3>
+
+Zabbix Monitoring
+
+</h3>
+
+<p>
+
+Infrastructure monitoring,
+availability, visibility and
+operational metrics.
+
+</p>
+
+<span class="project-tag">
+
+MONITORING
+
+</span>
+
+</div>
+
+<div class="card project">
+
+<h3>
+
+Enterprise Systems
+
+</h3>
+
+<p>
+
+Implementation, administration
+and user training involving
+MV Sistemas, Autolac and 1Doc.
+
+</p>
+
+<span class="project-tag">
+
+SYSTEMS
+
+</span>
+
+</div>
+
+<div class="card project">
+
+<h3>
+
+IT Infrastructure
+
+</h3>
+
+<p>
+
+Servers, networks, virtualization,
+security and technology
+infrastructure management.
+
+</p>
+
+<span class="project-tag">
+
+INFRASTRUCTURE
+
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact">
+
+<div class="container contact">
+
+<h2 class="section-title">
+
+contact
+
+</h2>
+
+<p class="contact-text">
+
+Let's connect.
+
+</p>
+
+<div class="links">
+
+<a
+href="https://www.linkedin.com/in/admilsonsantana/"
+target="_blank"
+
+>
+
+LinkedIn
+
+</a>
+
+<a
+href="https://github.com/DhimiSantana"
+target="_blank"
+
+>
+
+GitHub
+
+</a>
+
+<a
+href="https://www.credly.com/users/admilson-santana-teixeira"
+target="_blank"
+
+>
+
+Credly
+
+</a>
+
+<a
+href="mailto:admilsonsantana33@gmail.com"
+
+>
+
+Email
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div class="container">
+
+<p>
+
+admilson@cybersecurity:~$ exit
+
+</p>
+
+<br>
+
+<p>
+
+© 2026 <span>Admilson Santana</span>
+
+</p>
+
+</div>
+
+</footer>
+
+</body>
+
+</html>
